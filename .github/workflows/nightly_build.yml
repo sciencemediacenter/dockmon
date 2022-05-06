@@ -1,0 +1,34 @@
+name: Build nightly image
+
+on:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '0 2 * * *'
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+  
+jobs:
+  setup:
+    runs-on: self-hosted
+    steps:    
+      - name: Check if GitHub Runner has access to Docker Daemon
+        run:
+          docker info
+
+  build:
+    runs-on: self-hosted
+    needs: setup
+    steps:
+      - uses: actions/checkout@v2
+        
+      - name: Build from .devcontainer Dockerfile
+        run: docker build -t ${{ secrets.DEPLOYMENT_DOCKER_REGISTRY_URL }}/$GITHUB_REPOSITORY:nightly --no-cache --force-rm .       
+               
+  deploy:
+    runs-on: self-hosted
+    needs: build
+    steps:    
+      - name: Push to Docker Registry
+        run:
+          docker push ${{ secrets.DEPLOYMENT_DOCKER_REGISTRY_URL }}/$GITHUB_REPOSITORY:nightly

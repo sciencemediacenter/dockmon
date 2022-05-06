@@ -1,0 +1,41 @@
+name: Build on new release
+
+on:
+  release:
+    types: [published]
+ 
+jobs:
+  setup:
+    runs-on: self-hosted
+    env:
+      CURRENT_BUILD_TAG: ${{ github['event']['release']['tag_name'] }}
+    steps:    
+      - name: Check if GitHub Runner has access to Docker Daemon
+        run: docker info
+          
+      - name: Checking Build Vars
+        run: echo "$GITHUB_REPOSITORY:$CURRENT_BUILD_TAG"
+
+  build:
+    runs-on: self-hosted
+    needs: setup
+    env:
+      CURRENT_BUILD_TAG: ${{ github['event']['release']['tag_name'] }}
+    steps:
+      - uses: actions/checkout@v2
+        
+      - name: Build from .devcontainer Dockerfile
+        run: docker build -t ${{ secrets.DEPLOYMENT_DOCKER_REGISTRY_URL }}/$GITHUB_REPOSITORY:$CURRENT_BUILD_TAG --no-cache --force-rm .       
+               
+  deploy:
+    runs-on: self-hosted
+    needs: build
+    env:
+      CURRENT_BUILD_TAG: ${{ github['event']['release']['tag_name'] }}
+    steps:    
+      - name: Checking Build Vars
+        run: echo "$GITHUB_REPOSITORY:$CURRENT_BUILD_TAG"
+    
+      - name: Push to Docker Registry
+        run:
+          docker push ${{ secrets.DEPLOYMENT_DOCKER_REGISTRY_URL }}/$GITHUB_REPOSITORY:$CURRENT_BUILD_TAG
