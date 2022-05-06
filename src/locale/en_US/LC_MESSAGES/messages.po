@@ -1,0 +1,137 @@
+# English (United States) translations for Docker Monitor.
+# Copyright (C) 2020 ORGANIZATION
+# This file is distributed under the same license as the project.
+# Hendrik Adam <hendrik.adam@sciencemediacenter.de>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version:  0.1\n"
+"Report-Msgid-Bugs-To: hendrik.adam@sciencemediacenter.de\n"
+"POT-Creation-Date: 2022-04-28 09:45+0000\n"
+"PO-Revision-Date: 2020-09-24 11:03+0000\n"
+"Last-Translator: Hendrik Adam <hendrik.adam@sciencemediacenter.de>\n"
+"Language: en_US\n"
+"Language-Team: en_US <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: src/run.py:38
+msgid "INIT_CORE_STARTUP"
+msgstr "Starting Docker Monitor"
+
+#: src/run.py:47
+msgid "INIT_CONFIG_MISSING_ENVIRONMENT_VARS"
+msgstr "Missing required environment vars - Check README"
+
+#: src/run.py:58
+msgid "CORE_SCHEDULER_NOT_RUNNING_EXIT"
+msgstr "Scheduler not running - Exiting."
+
+#: src/handler/DockerHandler.py:55 src/handler/DockerHandler.py:67
+msgid "DOCKERHANDLER_EXCEPTION_SOCKET_CONNECT"
+msgstr "Cant to connect to Docker Socket"
+
+#: src/handler/DockerHandler.py:78
+msgid "DOCKERHANDLER_EXCEPTION_DOCKERCLIENT_NONE"
+msgstr "Docker Client is not set"
+
+#: src/handler/DockerHandler.py:83
+msgid "DOCKERHANDLER_EXCEPTION_API_ERROR"
+msgstr "Docker API Error"
+
+#: src/handler/DockerHandler.py:85
+msgid "DOCKERHANDLER_SOCKET_CONNECTION_ACCEPTED"
+msgstr "Connected to Docker Socket"
+
+#: src/handler/DockerHandler.py:108
+msgid "DOCKERHANDLER_EXCEPTION_CONTAINER_NOT_FOUND"
+msgstr "Container not found"
+
+#: src/handler/SlackReporting.py:84
+msgid "SLACKREPORT_GRACE_PERIOD_NOT_EXPIRED"
+msgstr ""
+"Alert occured, but will not be reported, since this alert is under a "
+"grace period."
+
+#: src/handler/SlackReporting.py:100
+#, python-format
+msgid "SLACKREPORT_TRIGGER_MESSAGE %s"
+msgstr ""
+"Container *%s* has triggered an Alert! \n"
+"\n"
+"For more information refer to the fields below: \n"
+"\n"
+
+#: src/handler/SlackReporting.py:104
+msgid "SLACKREPORT_HEADER_TRIGGER"
+msgstr "Trigger:"
+
+#: src/handler/SlackReporting.py:109
+msgid "SLACKREPORT_HEADER_REPORT"
+msgstr "Report / Logfile:"
+
+#: src/handler/SlackReporting.py:123 src/handler/SlackReporting.py:135
+#, python-format
+msgid "SLACKREPORT_EXCEPTION_API_ERROR %s"
+msgstr "Slack Report could not be send. Api returned %s"
+
+#: src/monitoring/MonitorScheduler.py:85
+#, python-format
+msgid "MONITORSCHEDULER_EXECPTION_SCHEDULER_NOT_STARTED %s"
+msgstr "Scheduler is not running. Error: %s"
+
+#: src/monitoring/MonitorScheduler.py:102
+#, python-format
+msgid "MONITORSCHEDULER_REMOVE_JOB_MISSING_CONTAINER %s"
+msgstr "Job %s removed - Container is missing or stopped"
+
+#: src/monitoring/MonitorScheduler.py:127
+#, python-format
+msgid "MONITORSCHEDULER_ADDED_SCHEDULER_THREAD %s %d"
+msgstr "Added Log Monitoring for container '%s' with check interval of %d seconds"
+
+#: src/monitoring/MonitorScheduler.py:142
+#, python-format
+msgid "MONITORSCHEDULER_EXCEPTION_THREAD_EXCEPTION %s"
+msgstr "Monitoring thread %s return an exception"
+
+#: src/monitoring/MonitorScheduler.py:156
+#, python-format
+msgid "MONITORSCHEDULER_ALERT_TRIGGER %s"
+msgstr "Container %s triggered an Alert!"
+
+#: src/monitoring/MonitorScheduler.py:165
+msgid "MONITORSCHEDULER_INIT"
+msgstr "Initializing Monitoring Threads"
+
+#: src/monitoring/MonitorScheduler.py:179
+msgid "MONITORSCHEDULER_STARTED_DISCOVERY_THREAD"
+msgstr "Starting Dockmon Container Discovery"
+
+#: src/monitoring/Modules/MonitorBase.py:50
+#, python-format
+msgid "MONITORBASE_EXCEPTION_PARAMETER_NOT_FOUND %s"
+msgstr "Init Monitoring Job: Parameter %s not found in Config"
+
+#: src/monitoring/Modules/MonitorBase.py:53
+#, python-format
+msgid "MONITORBASE_EXCEPTION_LIST_PARAMETERS %s"
+msgstr "Init Monitoring Job: Required Parameters for Logfile Monitoring are: %s"
+
+#: src/monitoring/Modules/MonitorBase.py:66
+#, python-format
+msgid "MONITORBASE_EXCEPTION_CONTAINER_NOT_FOUND %s"
+msgstr "Init Monitoring Job: Container %s not found"
+
+#: src/monitoring/Modules/MonitorLogFiles.py:85
+msgid "MONITORLOG_EXCEPTION_DECODE"
+msgstr "Could not decode logs"
+
+#: src/monitoring/Modules/MonitorLogFiles.py:104
+#: src/monitoring/Modules/MonitorLogFiles.py:118
+msgid "MONITORLOG_TRIGGER_WORD_INCLUDE"
+msgstr "Logfile included monitored word(s)"
+

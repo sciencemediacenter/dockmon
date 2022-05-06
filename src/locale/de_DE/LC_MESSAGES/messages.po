@@ -1,0 +1,227 @@
+# German (Germany) translations for PROJECT.
+# Copyright (C) 2020 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2022-04-28 09:45+0000\n"
+"PO-Revision-Date: 2020-09-24 11:03+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: de_DE\n"
+"Language-Team: de_DE <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: src/run.py:38
+msgid "INIT_CORE_STARTUP"
+msgstr "Starte Docker Monitor"
+
+#: src/run.py:47
+msgid "INIT_CONFIG_MISSING_ENVIRONMENT_VARS"
+msgstr ""
+
+#: src/run.py:58
+msgid "CORE_SCHEDULER_NOT_RUNNING_EXIT"
+msgstr ""
+
+#: src/handler/DockerHandler.py:55 src/handler/DockerHandler.py:67
+msgid "DOCKERHANDLER_EXCEPTION_SOCKET_CONNECT"
+msgstr ""
+
+#: src/handler/DockerHandler.py:78
+msgid "DOCKERHANDLER_EXCEPTION_DOCKERCLIENT_NONE"
+msgstr ""
+
+#: src/handler/DockerHandler.py:83
+msgid "DOCKERHANDLER_EXCEPTION_API_ERROR"
+msgstr ""
+
+#: src/handler/DockerHandler.py:85
+msgid "DOCKERHANDLER_SOCKET_CONNECTION_ACCEPTED"
+msgstr ""
+
+#: src/handler/DockerHandler.py:108
+msgid "DOCKERHANDLER_EXCEPTION_CONTAINER_NOT_FOUND"
+msgstr ""
+
+#: src/handler/SlackReporting.py:84
+msgid "SLACKREPORT_GRACE_PERIOD_NOT_EXPIRED"
+msgstr ""
+
+#: src/handler/SlackReporting.py:100
+#, python-format
+msgid "SLACKREPORT_TRIGGER_MESSAGE %s"
+msgstr ""
+
+#: src/handler/SlackReporting.py:104
+msgid "SLACKREPORT_HEADER_TRIGGER"
+msgstr ""
+
+#: src/handler/SlackReporting.py:109
+msgid "SLACKREPORT_HEADER_REPORT"
+msgstr ""
+
+#: src/handler/SlackReporting.py:123 src/handler/SlackReporting.py:135
+#, python-format
+msgid "SLACKREPORT_EXCEPTION_API_ERROR %s"
+msgstr ""
+
+#: src/monitoring/MonitorScheduler.py:85
+#, python-format
+msgid "MONITORSCHEDULER_EXECPTION_SCHEDULER_NOT_STARTED %s"
+msgstr ""
+
+#: src/monitoring/MonitorScheduler.py:102
+#, python-format
+msgid "MONITORSCHEDULER_REMOVE_JOB_MISSING_CONTAINER %s"
+msgstr ""
+
+#: src/monitoring/MonitorScheduler.py:127
+#, python-format
+msgid "MONITORSCHEDULER_ADDED_SCHEDULER_THREAD %s %d"
+msgstr ""
+
+#: src/monitoring/MonitorScheduler.py:142
+#, python-format
+msgid "MONITORSCHEDULER_EXCEPTION_THREAD_EXCEPTION %s"
+msgstr ""
+
+#: src/monitoring/MonitorScheduler.py:156
+#, python-format
+msgid "MONITORSCHEDULER_ALERT_TRIGGER %s"
+msgstr ""
+
+#: src/monitoring/MonitorScheduler.py:165
+msgid "MONITORSCHEDULER_INIT"
+msgstr ""
+
+#: src/monitoring/MonitorScheduler.py:179
+msgid "MONITORSCHEDULER_STARTED_DISCOVERY_THREAD"
+msgstr ""
+
+#: src/monitoring/Modules/MonitorBase.py:50
+#, python-format
+msgid "MONITORBASE_EXCEPTION_PARAMETER_NOT_FOUND %s"
+msgstr ""
+
+#: src/monitoring/Modules/MonitorBase.py:53
+#, python-format
+msgid "MONITORBASE_EXCEPTION_LIST_PARAMETERS %s"
+msgstr ""
+
+#: src/monitoring/Modules/MonitorBase.py:66
+#, python-format
+msgid "MONITORBASE_EXCEPTION_CONTAINER_NOT_FOUND %s"
+msgstr ""
+
+#: src/monitoring/Modules/MonitorLogFiles.py:85
+msgid "MONITORLOG_EXCEPTION_DECODE"
+msgstr ""
+
+#: src/monitoring/Modules/MonitorLogFiles.py:104
+#: src/monitoring/Modules/MonitorLogFiles.py:118
+msgid "MONITORLOG_TRIGGER_WORD_INCLUDE"
+msgstr ""
+
+#~ msgid "SLACKREPORT_EXCEPTION_API_ERROR %s "
+#~ msgstr ""
+
+#~ msgid "SLACKREPORT_TRIGGER_MESSAGE"
+#~ msgstr ""
+
+#~ msgid "MONITORINGSCHEDULER_EXECPTION_SCHEDULER_NOT_STARTED %s"
+#~ msgstr ""
+
+#~ msgid "MONITORINGSCHEDULER_SCHEDULER_HEALTH_REPORT"
+#~ msgstr ""
+
+#~ msgid "MONITORSCHEDULER_EXCEPTION_THREAD_EXCEPTION"
+#~ msgstr ""
+
+#~ msgid "MONITORSCHEDULER_CONTAINER_ALERTED %s"
+#~ msgstr ""
+
+#~ msgid "CARETAKER_STOP_CONTAINER %s"
+#~ msgstr ""
+
+#~ msgid "CARETAKER_EXCEPTION_APIERROR"
+#~ msgstr ""
+
+#~ msgid "CARETAKER_EXCEPTION_STOPPED_CONTAINER_STILL_RUNNING"
+#~ msgstr ""
+
+#~ msgid "CARETAKER_STOPPING_SUCCESSFUL %s"
+#~ msgstr ""
+
+#~ msgid "CARETAKER_EXCEPTION_CONTAINER_NOT_FOUND"
+#~ msgstr ""
+
+#~ msgid "CARETAKER_RESTART_CONTAINER %s"
+#~ msgstr ""
+
+#~ msgid "CARETAKER_EXCEPTION_RESTARTED_CONTAINER_NOT_RUNNING"
+#~ msgstr ""
+
+#~ msgid "CARETAKER_RESTART_SUCCESSFUL %s"
+#~ msgstr ""
+
+#~ msgid "CARETAKER_EXCEPTION_UNKNOWN_ACTION"
+#~ msgstr ""
+
+#~ msgid "CORE_SCHEDULER_NOT_RUNNING_EXIT"
+#~ msgstr ""
+
+#~ msgid "MONITORSCHEDULER_STARTED_DISCOVERY_THREAD"
+#~ msgstr ""
+
+#~ msgid "MONITORSCHEDULER_EXCEPTION_UNKNOWN_MONITORING_TYPE %s"
+#~ msgstr ""
+
+#~ msgid "MONITORSCHEDULER_ADDED_SCHEDULER_THREAD %s %d"
+#~ msgstr ""
+
+#~ msgid "MONITORSCHEDULER_EXCEPTION_CONFIG_ERROR"
+#~ msgstr ""
+
+#~ msgid "MONITORSCHEDULER_STARTED_HEALTH_THREAD"
+#~ msgstr ""
+
+#~ msgid "MONITORSCHEDULER_TAKE_ACTION_INFO"
+#~ msgstr ""
+
+#~ msgid "MONITORLOG_EXCEPTION_CONTAINER_NOT_ACTIVE"
+#~ msgstr ""
+
+#~ msgid "MONITORSCHEDULER_SCHEDULER_HEALTH_REPORT"
+#~ msgstr ""
+
+#~ msgid "MONITORLOG_EXCEPTION_CONTAINER_NOT_ACTIVE %s"
+#~ msgstr ""
+
+#~ msgid "MONITORSCHEDULER_REMOVE_JOB_MISSING_CONTAINER"
+#~ msgstr ""
+
+#~ msgid "CONFIGPROVIDER_EXCEPTION_RELOADING_CONFIG"
+#~ msgstr ""
+
+#~ msgid "CONFIGPROVIDER_READING_ENV"
+#~ msgstr ""
+
+#~ msgid "CONFIGPROVIDER_LOADED_CONFIG_FROM_PATH %s"
+#~ msgstr ""
+
+#~ msgid "CONFIGPROVIDER_EXCEPTION_FILE_NOT_FOUND %s"
+#~ msgstr ""
+
+#~ msgid "CONFIGPROVIDER_EXCEPTION_JSON_ERROR"
+#~ msgstr ""
+
+#~ msgid "SLACKREPORT_HEADER_ACTION"
+#~ msgstr ""
+

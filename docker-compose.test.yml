@@ -1,0 +1,33 @@
+## This file starts a test environment with Dockmon and a Bash Container.
+## Enter the Bash-Container via "docker exec -it dockmon_bashtest bash"
+## and provoke an Alert using "echo error >> /proc/1/fd/1"
+## Please check the docker.sock mount, so it does fit your local config. 
+version: '3'
+
+services:
+  dockmon_test:
+    build:
+      context: .
+    container_name: dockmon_test
+    environment:
+      - DOCKMON_CONFIG_GRACEPERIOD=3600
+      - DOCKMON_CONFIG_SLACK_TOKEN=SLACKTOKEN
+      - DOCKMON_CONFIG_SLACK_CHANNEL=SLACKCHANNEL
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: >
+      python3.8 /opt/dockmon/dockmon.py
+
+  bash_test:
+    image: bash:4.4
+    container_name: dockmon_bash
+    labels:
+      io.smclab.dockmon.enabled: true                          # Enables Dockmon Monitoring for this Container
+      io.smclab.dockmon.monitoring.logs: true                  # Enables Logfile Monitoring
+      io.smclab.dockmon.monitoring.logs.include: "error, ..."  # Words to look for in the Log
+      io.smclab.dockmon.monitoring.logs.exclude: "test, ..."   # Do not alert, if one of theses words are included
+      io.smclab.dockmon.monitoring.logs.since: 60              # Get the Logs of the last X seconds, defaults to 60
+      io.smclab.dockmon.monitoring.logs.casesensitive: true    # Case Sensitive Monitoring, defaults to true
+      io.smclab.dockmon.monitoring.logs.checkinterval: 60      # Check Logs every X seconds, defaults to 60
+      
+    command: sleep infinity
