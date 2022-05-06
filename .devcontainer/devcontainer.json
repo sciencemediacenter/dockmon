@@ -1,0 +1,41 @@
+// For format details, see https://aka.ms/vscode-remote/devcontainer.json or this file's README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.134.1/containers/python-3
+{
+	"name": "DockMon Dev-Container",
+	"build": {
+		"dockerfile": "../Dockerfile",
+		"context": "..",
+	},
+	"settings": { 
+		"python.pythonPath": "/usr/local/bin/python",
+		"python.linting.enabled": true,
+		"python.linting.pylintEnabled": false,
+		"python.linting.mypyEnabled": true,
+		"python.formatting.blackPath": "/usr/local/bin/black",
+		"python.linting.mypyPath": "/usr/local/bin/mypy",                  
+		"python.formatting.provider": "black",                    
+		"python.formatting.blackArgs": ["--line-length", "120"],  
+		"[python]": {
+		"editor.formatOnSave": true,                            
+		},
+		"editor.wordWrap": "off" ,
+
+	},
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "pip3 install --user -r requirements.txt",
+
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"ms-python.python"
+	],
+
+	"mounts": [
+		"source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
+	],
+	"containerEnv": {
+		// development environment
+		"DOCKMON_CONFIG_GRACEPERIOD": "3600",
+		"DOCKMON_CONFIG_SLACK_TOKEN": "SLACKTOKEN",
+		"DOCKMON_CONFIG_SLACK_CHANNEL": "SLACKCHANNEL",
+	},
+}
