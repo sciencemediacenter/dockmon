@@ -47,8 +47,8 @@ DockMon is configured via environment variables. They must be available when the
 
 ```
 DOCKMON_CONFIG_GRACEPERIOD=3600                          # Grace Periord for Alerts in Seconds
-DOCKMON_CONFIG_SLACK_TOKEN="SLACKTOKEN"                  # Slack-API Token
-DOCKMON_CONFIG_SLACK_CHANNEL="SLACKCHANNEL"              # Slack Channel to alert to.
+DOCKMON_CONFIG_SLACK_TOKEN= SLACKTOKEN                   # Slack-API Token
+DOCKMON_CONFIG_SLACK_CHANNEL= SLACKCHANNEL               # Slack Channel to alert to.
 ```
 
 ### Supported Labels for monitored containers
@@ -74,8 +74,8 @@ docker run -d  \
     --name "dockmon" \
     -v "/var/run/docker.sock:/var/run/docker.sock" \
     -e DOCKMON_CONFIG_GRACEPERIOD=3600 \
-    -e DOCKMON_CONFIG_SLACK_TOKEN="SLACKTOKEN" \
-    -e DOCKMON_CONFIG_SLACK_CHANNEL="SLACKCHANNEL" \  
+    -e DOCKMON_CONFIG_SLACK_TOKEN=SLACKTOKEN \
+    -e DOCKMON_CONFIG_SLACK_CHANNEL=SLACKCHANNEL \  
     dockmon:latest python3.8 /opt/dockmon/src/run.py
 ```
 
@@ -96,7 +96,7 @@ services:
     environment:
       - DOCKMON_CONFIG_GRACEPERIOD=3600
       - DOCKMON_CONFIG_SLACK_TOKEN=SLACKTOKEN
-      - DOCKMON_CONFIG_SLACK_CHANNEL=#SLACKCHANNEL           # Note: The # must be supplied
+      - DOCKMON_CONFIG_SLACK_CHANNEL=#SLACKCHANNEL             # Note: The # must be supplied
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     command: >
