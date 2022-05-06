@@ -132,7 +132,7 @@ Sadly, we currently do not have full test coverage. We would like to cover DockM
 
 If you would like to participate in the development of DockMon, we would be very happy to hear from you. Unfortunately our resources are limited, so we can't fully maintain this app. Bug fixes and the like will of course still be taken care of by us, as we also use DockMon in our own systems. 
 
-For development we use Visual Studio Code Remote Containers for which you can find a configuration file inside this repo.
+For development, we use Visual Studio Code Remote Containers for which you can find a configuration file inside this repo. Also use the _locale.sh_ script to generate new i18n files (We use pybabel for this). 
 
 We are looking forward to your pull request. 
 
