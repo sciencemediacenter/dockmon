@@ -76,7 +76,7 @@ docker run -d  \
     -e DOCKMON_CONFIG_GRACEPERIOD=3600 \
     -e DOCKMON_CONFIG_SLACK_TOKEN=SLACKTOKEN \
     -e DOCKMON_CONFIG_SLACK_CHANNEL=SLACKCHANNEL \  
-    dockmon:latest python3.8 /opt/dockmon/src/run.py
+    dockmon:latest python3.8 /opt/dockmon/src/dockmon.py
 ```
 
 ### Sample Docker-Compose File
